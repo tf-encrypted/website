@@ -1,12 +1,24 @@
 .footer {
     display: flex;
-    align-items: center;
     height: 25vh;
     background-color: black;
     flex-direction: row;
     padding: 5rem;
+    padding-bottom: 15rem;
 
     img {
         height: 50px;
+    }
+
+    .links {
+
+        display: flex;
+        flex-flow: column nowrap;
+        flex-grow: 1;
+        align-items: flex-end;
+
+        a {
+            color: white;
+        }
     }
 }
