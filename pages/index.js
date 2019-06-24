@@ -51,6 +51,10 @@ class Index extends React.Component {
         document.getElementsByClassName('hamburger-links')[0].style.transform = "translate(100%)"
     }
 
+    install() {
+        document.getElementById('install').scrollIntoView({block: 'center', behavior: 'smooth'})
+    }
+
     render() {
       return (
           <div className='cover'>
@@ -68,7 +72,7 @@ class Index extends React.Component {
                     <div className='slogan'>
                         <h1>Layer on top of Tensorflow for doing machine learning on encrypted data</h1>
                     </div>
-                    <button className='btn-cta'>Install Now</button>
+                    <button onClick={this.install.bind(this)} className='btn-cta'>Install Now</button>
                 </div>
 
                 <hr/>
@@ -108,7 +112,7 @@ class Index extends React.Component {
                     <button className='btn-secondary'><a href='https://arxiv.org/abs/1810.08130'>Read the Whitepaper</a></button>
                 </div>
 
-                <div className='install'>
+                <div className='install' id='install'>
                     <h2> Installation </h2>
                     <p>TF Encrypted is available as a package on PyPI supporting Python 3.5+ and Tensorflow 1.12.0+ which can be installed using</p>
                     <p className='code-inline'>pip install tf-encrypted</p>

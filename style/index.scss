@@ -32,6 +32,11 @@ input {
     border-width: 0px;
     border-radius: 5px;
     color: white;
+
+    a {
+        color: white;
+        text-decoration: none;
+    }
 }
 
 .btn-secondary {

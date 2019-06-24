@@ -36,7 +36,7 @@ class Header extends React.Component {
 
     render () {
         return (
-            <div className='header'>
+            <div className='header' id='top-header'>
                 <div className='logo'>
                     <div className='logo-wrapper'>
                         <img className='logo-icon' src={img}/>
