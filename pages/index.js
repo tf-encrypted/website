@@ -116,6 +116,7 @@ class Index extends React.Component {
                     <h2> Installation </h2>
                     <p>TF Encrypted is available as a package on PyPI supporting Python 3.5+ and Tensorflow 1.12.0+ which can be installed using</p>
                     <p className='code-inline'>pip install tf-encrypted</p>
+                    <a href='https://github.com/tf-encrypted/tf-encrypted#installation'>View more ways to install</a>
                 </div>
 
                 <hr className='green'/>
