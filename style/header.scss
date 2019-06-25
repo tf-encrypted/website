@@ -35,9 +35,17 @@
         flex-grow: 1;
         justify-content: space-between;
 
+        * {
+            align-self: center;
+        }
+
+        span {
+            // github button has a tiny bit of padding under it
+            margin-top: 5px;
+        }
+
         a {
             color: #70808D;
-            align-self: center;
 
             img {
                 height: 48px;
