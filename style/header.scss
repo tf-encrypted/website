@@ -1,3 +1,11 @@
+$max-width: 760px;
+
+.row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
 .header {
     display: flex;
     position: fixed;
@@ -63,17 +71,19 @@
         display: none;
         width: 40px;
         height: 40px;
-        background-color: blue;
     }
 
 
-    @media screen and (max-width: 620px) {
+    @media screen and (max-width: $max-width) {
         .links {
             display: none;
         }
 
         .hamburger {
             display: flex;
+            background-image: url('../img/hamburger.png');
+            background-size: contain;
+            background-repeat: no-repeat;
         }
     }
 }
@@ -82,22 +92,31 @@
     display: none;
 }
 
-@media screen and (max-width: 620px) {
+@media screen and (max-width: $max-width) {
     .hamburger-links {
         display: flex;
         position: fixed;
-        flex-direction: column;
-        flex-wrap: wrap;
+        flex-flow: column wrap;
         width: 100%;
         height: 100vh;
         z-index: 200;
 
         transform: translate(100%);
 
-        .close {
+        .mobile-close-wrapper {
             flex-grow: 1;
-            background-color: blue;
+            padding: 2rem;
             width: 10vh;
+            background-color: white;
+            opacity: 1;
+        }
+
+        .mobile-close {
+            background: white url('../img/x.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 100%;
+            height: 100%;
         }
 
         .background {
@@ -107,13 +126,57 @@
         }
 
         .links {
+            display: flex;
+            flex-flow: column wrap;
             background-color: white;
             width: 100%;
             height: 100%;
-            padding: 5rem;
+            padding-left: 5rem;
+
+            .logo {
+                max-height: 60px;
+                margin-bottom: 5rem;
+                margin-top: 0rem !important;
+
+                img {
+                    height: 100%;
+                }
+            }
 
             * {
-                padding-top: 3rem;
+                margin-top: 3rem;
+                color: #70808D;
+            }
+
+            // img {
+            //     padding-top: 0rem !important;
+            //     margin-left: 0 !important;
+            // }
+
+            .footer {
+                display: flex;
+                background-color: white;
+                flex-flow: row nowrap;
+                padding: 0rem;
+                align-items: flex-end;
+                flex-grow: 1;
+
+                * {
+                    margin: 0px !important;
+                    margin-right: 1rem !important;
+                }
+
+                .github-wrapper {
+                    display: flex;
+                    flex-flow: row nowrap;
+                    align-items: center;
+                    padding-bottom: 2rem;
+
+                    span {
+                        margin-top: 5px !important;
+                    }
+                }
+
             }
         }
     }
