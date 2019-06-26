@@ -178,22 +178,22 @@ class Index extends React.Component {
                             <div>
                                 <img src={tutorialA}/>
                                 <h5>Simple Average of Encrypted Values</h5>
-                                <p>As a simple starting point, this example illustrates how TF Encrypted can be used to securely compute the average of inputs from a set of input providers… </p>
-                                <a href='#'>Read more</a>
+                                <p>As a simple starting point, this example illustrates how TF Encrypted can be used to securely compute the… </p>
+                                <a href='https://github.com/tf-encrypted/tf-encrypted/tree/master/examples/simple-average'>Read more</a>
                             </div>
 
                             <div>
                                 <img src={tutorialB}/>
-                                <h5>Simple Average of Encrypted Values</h5>
+                                <h5>MNIST</h5>
                                 <p>Perform private predictions using a simple neural network on the MNIST data set. It also shows how to integrate…</p>
-                                <a href='#'>Read more</a>
+                                <a href='https://github.com/tf-encrypted/tf-encrypted/tree/master/examples/mnist'>Read more</a>
                             </div>
 
                             <div>
                                 <img src={tutorialC}/>
-                                <h5>Simple Average of Encrypted Values</h5>
-                                <p>This example shows how TF Encrypted can be used to perform secure aggregation for federated learning, where a model owner is training a model by… </p>
-                                <a href='#'>Read more</a>
+                                <h5>Federated Learning</h5>
+                                <p>This example shows how TF Encrypted can be used to perform secure aggregation for federated learning, where a model… </p>
+                                <a href='https://github.com/tf-encrypted/tf-encrypted/tree/master/examples/federated-learning'>Read more</a>
                             </div>
                         </div>
                     </div>
