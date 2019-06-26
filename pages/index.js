@@ -44,11 +44,30 @@ with tfe.Session() as sess:
 class Index extends React.Component {
 
     showSideMenu() {
-        document.getElementsByClassName('hamburger-links')[0].style.transform = "translate(0%)"
+        let hamburger = document.getElementsByClassName('hamburger-links')[0]
+        let hamburgerContent = document.getElementsByClassName('hamburger-content')[0]
+
+        hamburger.style['transform'] = 'translate(0%)'
+        hamburger.style['animation-name'] = 'alpha-in'
+        hamburger.style['background-color'] = '#000000aa'
+
+        hamburgerContent.style['animation-name'] = 'slide-in'
+        hamburgerContent.style['transform'] = 'translate(0%)'
     }
 
     hideSideMenu() {
-        document.getElementsByClassName('hamburger-links')[0].style.transform = "translate(100%)"
+        let hamburger = document.getElementsByClassName('hamburger-links')[0]
+        let hamburgerContent = document.getElementsByClassName('hamburger-content')[0]
+
+        hamburger.style['animation-name'] = 'alpha-out'
+        hamburger.style['background-color'] = '#00000000'
+
+        setTimeout(() => {
+            hamburger.style['transform'] = 'translate(100%)'
+        }, 500)
+
+        hamburgerContent.style['animation-name'] = 'slide-out'
+        hamburgerContent.style['transform'] = 'translate(100%)'
     }
 
     install() {

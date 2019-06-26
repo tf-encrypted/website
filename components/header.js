@@ -11,25 +11,25 @@ class Overflow extends React.Component {
     render () {
         return (
             <div className='hamburger-links'>
-                <div className='mobile-close-wrapper' onClick={this.props.closeClicked.bind(this.props)}>
-                    <div className='mobile-close'></div>
-                </div>
-                <div className='background'>
-                </div>
-                <div className='links'>
-                    <div className='logo'>
-                        <img src={logo}/>
+                <div className='hamburger-content'>
+                    <div className='mobile-close-wrapper' onClick={this.props.closeClicked.bind(this.props)}>
+                        <div className='mobile-close'></div>
                     </div>
+                    <div className='links'>
+                        <div className='logo'>
+                            <img src={logo}/>
+                        </div>
 
-                    <a className='community' onClick={this.props.closeClicked.bind(this.props)} href='#community'>Community</a>
-                    <a href='https://tf-encrypted.readthedocs.io/en/latest/'>Documentation</a>
+                        <a className='community' onClick={this.props.closeClicked.bind(this.props)} href='#community'>Community</a>
+                        <a href='https://tf-encrypted.readthedocs.io/en/latest/'>Documentation</a>
 
-                    <div className='footer'>
-                        <div className='github-wrapper'>
-                            <a className='cta-link' href='https://github.com/tf-encrypted/tf-encrypted'>
-                                <img src={github}/>
-                            </a>
-                            <a className='github-button' href='https://github.com/tf-encrypted/tf-encrypted' data-icon='octicon-star' data-size='large' data-show-count='true' aria-label='Star ntkme/github-buttons on GitHub'>Star</a>
+                        <div className='footer'>
+                            <div className='github-wrapper'>
+                                <a className='cta-link' href='https://github.com/tf-encrypted/tf-encrypted'>
+                                    <img src={github}/>
+                                </a>
+                                <a className='github-button' href='https://github.com/tf-encrypted/tf-encrypted' data-icon='octicon-star' data-size='large' data-show-count='true' aria-label='Star ntkme/github-buttons on GitHub'>Star</a>
+                            </div>
                         </div>
                     </div>
                 </div>
