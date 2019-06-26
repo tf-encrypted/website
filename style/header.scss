@@ -1,4 +1,6 @@
 $max-width: 760px;
+$animation-duration: 500ms;
+$header-height: 92px;
 
 .row {
     display: flex;
@@ -14,8 +16,7 @@ $max-width: 760px;
     padding: 1.5rem;
     padding: 1.5rem;
     align-items: center;
-    height: 92px;
-    min-height: 88;
+    height: $header-height;
     width: 100%;
     background-color: white;
     z-index: 1;
@@ -93,20 +94,70 @@ $max-width: 760px;
 }
 
 @media screen and (max-width: $max-width) {
+
+    @keyframes slide-in {
+        from {
+            transform: translate(100%)
+        }
+        to {
+            transform: translate(0%)
+        }
+    }
+
+    @keyframes alpha-in {
+        from {
+            background-color: #00000000;
+        }
+
+        to {
+            background-color: #000000aa;
+        }
+    }
+
+    @keyframes slide-out {
+        from {
+            transform: translate(0%)
+        }
+        to {
+            transform: translate(100%)
+        }
+    }
+
+    @keyframes alpha-out {
+        from {
+            background-color: #000000aa;
+        }
+
+        to {
+            background-color: #00000000;
+        }
+    }
+
     .hamburger-links {
-        display: flex;
         position: fixed;
+        display: flex;
         flex-flow: column wrap;
         width: 100%;
-        height: 100vh;
+        height: 100%;
         z-index: 200;
-
         transform: translate(100%);
 
-        .mobile-close-wrapper {
+        background-color: #00000000;
+        animation-duration: $animation-duration;
+
+        .hamburger-content {
+            display: flex;
+            flex-flow: column wrap;
             flex-grow: 1;
+
+            transform: translate(100%);
+            animation-duration: $animation-duration;
+        }
+
+        .mobile-close-wrapper {
             padding: 2rem;
-            width: 10vh;
+            height: $header-height;
+            width: $header-height; // make it a square
             background-color: white;
             opacity: 1;
         }
@@ -117,12 +168,6 @@ $max-width: 760px;
             background-size: contain;
             width: 100%;
             height: 100%;
-        }
-
-        .background {
-            background-color: #000000aa;
-            height: 90%;
-            width: 10vh;
         }
 
         .links {
