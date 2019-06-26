@@ -67,13 +67,16 @@ a > img {
     margin: 1rem;
 }
 
-
 .content {
     display: flex;
     flex-direction: column;
     padding-top: 5rem;
 }
 
+.max {
+    max-width: $max-width;
+    align-self: center;
+}
 
 .banner {
     display: flex;
@@ -103,8 +106,6 @@ a > img {
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding-left: 5rem;
-    padding-right: 5rem;
 
     .row {
         display: flex;
@@ -131,19 +132,26 @@ a > img {
 }
 
 .small-block {
+
+
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
     background-color: #FFDC67;
+    justify-content: center;
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
     padding-left: 10rem;
     padding-right: 10rem;
 
-    * {
-        align-self: center;
+    .small-block-content {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        flex-grow: 1;
     }
+
+//     * {
+//         align-self: center;
+//     }
 
     h3 {
         max-width: 75%;
@@ -297,7 +305,7 @@ hr.green {
     padding-bottom: 7rem;
 }
 
-@media screen and (max-width: $max-width) {
+@media screen and (max-width: $mobile-cutoff) {
     .content > .overview {
         padding-left: 1rem;
         padding-right: 1rem;
@@ -313,8 +321,13 @@ hr.green {
         width: 100% !important;
     }
 
+    .small-block-content {
+        justify-content: space-around !important;
+    }
+
     .community {
         text-align: center;
+        align-self: center;
     }
 }
 
