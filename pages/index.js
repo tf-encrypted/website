@@ -97,7 +97,7 @@ class Index extends React.Component {
               <div className='cover'>
 
                 <Head>
-                    <title>TF Encrypted</title>
+                    <title>TF Encrypted | Encrypted Deep Learning in Tensorflow</title>
                     <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
                     <link rel='icon' href='static/favicon.ico'/>
                     <meta name='og:title' content='TF Encrypted | Encrypted Deep Learning in Tensorflow'/>
