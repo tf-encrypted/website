@@ -89,7 +89,7 @@ class Index extends React.Component {
             <div className='content'>
                 <div className='banner'>
                     <div className='slogan'>
-                        <h1>Layer on top of Tensorflow for doing machine learning on encrypted data</h1>
+                        <h1>Encrypted Machine Learning in TensorFlow</h1>
                     </div>
                     <button onClick={this.install.bind(this)} className='btn-cta'>Install Now</button>
                 </div>
