@@ -129,7 +129,7 @@ class Index extends React.Component {
                         <div className='row reverse'>
                             <div className='block-text'>
                                 <h2>State-of-the-Art Cryptography</h2>
-                                <p>Under the hood, TF Encrypted integrates state-of-the-art cryptography like secure multi-party computation, and homomorphic encryption.</p>
+                                <p>Under the hood, TF Encrypted integrates state-of-the-art cryptography like secure multi-party computation and homomorphic encryption. Take advantage of prebuilt highly optimized protocols or build and test your own using our pluggable architecture.</p>
                             </div>
                             <div className='img-wrapper'>
                                 <img src={tfeEncryption}/>
@@ -138,7 +138,7 @@ class Index extends React.Component {
                         <div className='row'>
                             <div className='block-text'>
                                 <h2>Easy to Use</h2>
-                                <p>TF Encrypted aims to make privacy-preserving machine learning readily available, without requiring expertise in cryptography, distributed systems, or high performance computing.</p>
+                                <p>TF Encrypted aims to make privacy-preserving machine learning simple and approachable, without requiring expertise in cryptography, distributed systems, or high-performance computing.</p>
                             </div>
                             <div className='img-wrapper'>
                                 <img src={tfeEasyToUse}/>
