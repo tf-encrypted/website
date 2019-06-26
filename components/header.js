@@ -20,7 +20,7 @@ class Overflow extends React.Component {
                             <img src={logo}/>
                         </div>
 
-                        <a className='community' onClick={this.props.closeClicked.bind(this.props)} href='#community'>Community</a>
+                        <a onClick={this.props.closeClicked.bind(this.props)} href='#community'>Community</a>
                         <a href='https://tf-encrypted.readthedocs.io/en/latest/'>Documentation</a>
 
                         <div className='footer'>

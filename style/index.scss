@@ -296,3 +296,25 @@ hr.green {
     padding-top: 7rem;
     padding-bottom: 7rem;
 }
+
+@media screen and (max-width: $max-width) {
+    .content > .overview {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .small-block {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        text-align: center;
+    }
+
+    .code-block {
+        width: 100% !important;
+    }
+
+    .community {
+        text-align: center;
+    }
+}
+
