@@ -82,11 +82,11 @@ class Index extends React.Component {
           <>
             <NextSeo config={{
                 title: 'TF Encrypted | Encrypted Deep Learning in Tensorflow',
-                description: 'TF Encrypted is a framework for encrypted machine learning in TensorFlow. It looks and feels like TensorFlow, taking advantage of the ease-of-use of the Keras API while enabling training and prediction over encrypted data.',
+                description: 'TF Encrypted is a framework for encrypted deep learning in TensorFlow. It looks and feels like TensorFlow, taking advantage of the ease-of-use of the Keras API while enabling training and prediction over encrypted data.',
                 openGraph: {
                     site_name: 'TF Encrypted',
                     title: 'TF Encrypted | Encrypted Deep Learning in Tensorflow',
-                    description: 'TF Encrypted is a framework for encrypted machine learning in TensorFlow. It looks and feels like TensorFlow, taking advantage of the ease-of-use of the Keras API while enabling training and prediction over encrypted data.',
+                    description: 'TF Encrypted is a framework for encrypted deep learning in TensorFlow. It looks and feels like TensorFlow, taking advantage of the ease-of-use of the Keras API while enabling training and prediction over encrypted data.',
                     images: [
                         { url: '/_next/static/images/tfe-share-01cb03ce0b198196210fc97990652ae9.png' }
                     ]
@@ -120,7 +120,7 @@ class Index extends React.Component {
                         <div className='row'>
                             <div className='block-text'>
                                 <h2>What is TF Encrypted?</h2>
-                                <p>TF Encrypted is a framework for encrypted machine learning in TensorFlow. It looks and feels like TensorFlow, taking advantage of the ease-of-use of the Keras API while enabling training and prediction over encrypted data.</p>
+                                <p>TF Encrypted is a framework for encrypted deep learning in TensorFlow. It looks and feels like TensorFlow, taking advantage of the ease-of-use of the Keras API while enabling training and prediction over encrypted data.</p>
                             </div>
                             <div className='img-wrapper'>
                                 <img src={tfeIntro}/>
@@ -138,7 +138,7 @@ class Index extends React.Component {
                         <div className='row'>
                             <div className='block-text'>
                                 <h2>Easy to Use</h2>
-                                <p>TF Encrypted aims to make privacy-preserving machine learning simple and approachable, without requiring expertise in cryptography, distributed systems, or high-performance computing.</p>
+                                <p>TF Encrypted aims to make privacy-preserving deep learning simple and approachable, without requiring expertise in cryptography, distributed systems, or high-performance computing.</p>
                             </div>
                             <div className='img-wrapper'>
                                 <img src={tfeEasyToUse}/>
