@@ -6,7 +6,7 @@ This repo contains the code for the [TF Encrypted](https://github.com/tf-encrypt
 
 ## Requirements
 
-[node.js](https://nodejs.org/) (developed with v11.12.0).
+[node.js](https://nodejs.org/) (developed with v11.12.0).  The project is a [next.js](https://nextjs.org) application.
 
 1. Fork/clone the repo
 1. `npm install`
