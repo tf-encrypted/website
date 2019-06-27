@@ -102,6 +102,20 @@ class Index extends React.Component {
                     <link rel='icon' href='static/favicon.ico'/>
                     <meta name='og:title' content='TF Encrypted | Encrypted Deep Learning in Tensorflow'/>
                     <meta name='og:image' content='/img/tfe-encryption.png'/>
+
+                    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125728747-3"></script>
+                    <script dangerouslySetInnerHTML={{ __html: `
+                      if (window.location.origin !== 'https://tf-encrypted.io') {
+                          // only track prod
+                          return
+                      }
+
+                      window.dataLayer = window.dataLayer || [];
+                      function gtag(){ dataLayer.push(arguments); }
+                      gtag('js', new Date());
+
+                      gtag('config', 'UA-125728747-3');
+                    `}} />
                 </Head>
 
                 <Header hamburgerClicked={this.showSideMenu.bind(this)}/>
