@@ -130,7 +130,7 @@ class Index extends React.Component {
 
                     <hr/>
 
-                    <div className='overview'>
+                    <div className='overview max'>
                         <div className='row'>
                             <div className='block-text'>
                                 <h2>What is TF Encrypted?</h2>
@@ -161,11 +161,13 @@ class Index extends React.Component {
                     </div>
 
                     <div className='small-block'>
-                        <h3>Private Machine Learning in TensorFlow using Secure Computation</h3>
-                        <button className='btn-secondary'><a href='https://arxiv.org/abs/1810.08130'>Read the Whitepaper</a></button>
+                        <div className='small-block-content max'>
+                            <h3>Private Machine Learning in TensorFlow using Secure Computation</h3>
+                            <button className='btn-secondary'><a href='https://arxiv.org/abs/1810.08130'>Read the Whitepaper</a></button>
+                        </div>
                     </div>
 
-                    <div className='install' id='install'>
+                    <div className='install max' id='install'>
                         <h2> Installation </h2>
                         <p>TF Encrypted is available as a package on PyPI supporting Python 3.5+ and Tensorflow 1.12.0+ which can be installed using</p>
                         <p className='code-inline'>pip install tf-encrypted</p>
@@ -225,19 +227,21 @@ class Index extends React.Component {
                     </div>
 
                     <div className='small-block mailing-list'>
-                        <h3>Subscribe to our mailing list</h3>
-                
-                        {/* TODO -- needs mailchimp url */}
-                        <form action='' method='post' id='mc-embedded-subscribe-form' name='mc-embedded-subscribe-form' className='validate' target='_blank' novalidate>
-                            <div className='input-button-holder'>
-                                <input type='email' name='EMAIL' className='email' id='mce-EMAIL' placeholder='email address' required></input>
-                                <input className='button btn-secondary' value='Subscribe' type='submit'/>
-                                <div id='mce-responses' className='clear'>
-                                    <div className='response' id='mce-error-response' style={{display:'none'}}></div>
-                                    <div className='response' id='mce-success-response' style={{display:'none'}}></div>
+                        <div className='small-block-content max'>
+                            <h3>Subscribe to our mailing list</h3>
+                    
+                            {/* TODO -- needs mailchimp url */}
+                            <form action='' method='post' id='mc-embedded-subscribe-form' name='mc-embedded-subscribe-form' className='validate' target='_blank' novalidate>
+                                <div className='input-button-holder'>
+                                    <input type='email' name='EMAIL' className='email' id='mce-EMAIL' placeholder='email address' required></input>
+                                    <input className='button btn-secondary' value='Subscribe' type='submit'/>
+                                    <div id='mce-responses' className='clear'>
+                                        <div className='response' id='mce-error-response' style={{display:'none'}}></div>
+                                        <div className='response' id='mce-success-response' style={{display:'none'}}></div>
+                                    </div>
                                 </div>
-                            </div>
-                        </form>
+                            </form>
+                        </div>
                     </div>
 
                     <hr className='green'/>

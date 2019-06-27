@@ -74,7 +74,7 @@ $header-height: 92px;
     }
 
 
-    @media screen and (max-width: $max-width) {
+    @media screen and (max-width: $mobile-cutoff) {
         .links {
             display: none;
         }
@@ -92,7 +92,7 @@ $header-height: 92px;
     display: none;
 }
 
-@media screen and (max-width: $max-width) {
+@media screen and (max-width: $mobile-cutoff) {
 
     @keyframes slide-in {
         from {
