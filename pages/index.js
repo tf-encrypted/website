@@ -82,11 +82,11 @@ class Index extends React.Component {
           <>
             <NextSeo config={{
                 title: 'TF Encrypted | Encrypted Deep Learning in Tensorflow',
-                description: 'TF Encrypted is a framework for encrypted machine learning in TensorFlow. It looks and feels like TensorFlow, taking advantage of the ease-of-use of the Keras API while enabling training and prediction over encrypted data.',
+                description: 'TF Encrypted is a framework for encrypted deep learning in TensorFlow. It looks and feels like TensorFlow, taking advantage of the ease-of-use of the Keras API while enabling training and prediction over encrypted data.',
                 openGraph: {
                     site_name: 'TF Encrypted',
                     title: 'TF Encrypted | Encrypted Deep Learning in Tensorflow',
-                    description: 'TF Encrypted is a framework for encrypted machine learning in TensorFlow. It looks and feels like TensorFlow, taking advantage of the ease-of-use of the Keras API while enabling training and prediction over encrypted data.',
+                    description: 'TF Encrypted is a framework for encrypted deep learning in TensorFlow. It looks and feels like TensorFlow, taking advantage of the ease-of-use of the Keras API while enabling training and prediction over encrypted data.',
                     images: [
                         { url: '/_next/static/images/tfe-share-01cb03ce0b198196210fc97990652ae9.png' }
                     ]
@@ -102,6 +102,20 @@ class Index extends React.Component {
                     <link rel='icon' href='static/favicon.ico'/>
                     <meta name='og:title' content='TF Encrypted | Encrypted Deep Learning in Tensorflow'/>
                     <meta name='og:image' content='/img/tfe-encryption.png'/>
+
+                    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125728747-3"></script>
+                    <script dangerouslySetInnerHTML={{ __html: `
+                      if (window.location.origin !== 'https://tf-encrypted.io') {
+                          // only track prod
+                          return
+                      }
+
+                      window.dataLayer = window.dataLayer || [];
+                      function gtag(){ dataLayer.push(arguments); }
+                      gtag('js', new Date());
+
+                      gtag('config', 'UA-125728747-3');
+                    `}} />
                 </Head>
 
                 <Header hamburgerClicked={this.showSideMenu.bind(this)}/>
@@ -116,11 +130,11 @@ class Index extends React.Component {
 
                     <hr/>
 
-                    <div className='overview'>
+                    <div className='overview max'>
                         <div className='row'>
                             <div className='block-text'>
                                 <h2>What is TF Encrypted?</h2>
-                                <p>TF Encrypted is a framework for encrypted machine learning in TensorFlow. It looks and feels like TensorFlow, taking advantage of the ease-of-use of the Keras API while enabling training and prediction over encrypted data.</p>
+                                <p>TF Encrypted is a framework for encrypted deep learning in TensorFlow. It looks and feels like TensorFlow, taking advantage of the ease-of-use of the Keras API while enabling training and prediction over encrypted data.</p>
                             </div>
                             <div className='img-wrapper'>
                                 <img src={tfeIntro}/>
@@ -138,7 +152,7 @@ class Index extends React.Component {
                         <div className='row'>
                             <div className='block-text'>
                                 <h2>Easy to Use</h2>
-                                <p>TF Encrypted aims to make privacy-preserving machine learning simple and approachable, without requiring expertise in cryptography, distributed systems, or high-performance computing.</p>
+                                <p>TF Encrypted aims to make privacy-preserving deep learning simple and approachable, without requiring expertise in cryptography, distributed systems, or high-performance computing.</p>
                             </div>
                             <div className='img-wrapper'>
                                 <img src={tfeEasyToUse}/>
@@ -147,11 +161,13 @@ class Index extends React.Component {
                     </div>
 
                     <div className='small-block'>
-                        <h3>Private Machine Learning in TensorFlow using Secure Computation</h3>
-                        <button className='btn-secondary'><a href='https://arxiv.org/abs/1810.08130'>Read the Whitepaper</a></button>
+                        <div className='small-block-content max'>
+                            <h3>Private Machine Learning in TensorFlow using Secure Computation</h3>
+                            <button className='btn-secondary'><a href='https://arxiv.org/abs/1810.08130'>Read the Whitepaper</a></button>
+                        </div>
                     </div>
 
-                    <div className='install' id='install'>
+                    <div className='install max' id='install'>
                         <h2> Installation </h2>
                         <p>TF Encrypted is available as a package on PyPI supporting Python 3.5+ and Tensorflow 1.12.0+ which can be installed using</p>
                         <p className='code-inline'>pip install tf-encrypted</p>
@@ -211,18 +227,20 @@ class Index extends React.Component {
                     </div>
 
                     <div className='small-block mailing-list'>
-                        <h3>Subscribe to our mailing list</h3>
-                
+                        <div className='small-block-content max'>
+                            <h3>Subscribe to our mailing list</h3>
+                    
                         <form action='https://tf-encrypted.us3.list-manage.com/subscribe/post?u=9d309aaebe20f1ee0e4019019&amp;id=d411344ca8' method='post' id='mc-embedded-subscribe-form' name='mc-embedded-subscribe-form' className='validate' target='_blank' novalidate>
-                            <div className='input-button-holder'>
-                                <input type='email' name='EMAIL' className='email' id='mce-EMAIL' placeholder='email address' required></input>
-                                <input className='button btn-secondary' value='Subscribe' type='submit'/>
-                                <div id='mce-responses' className='clear'>
-                                    <div className='response' id='mce-error-response' style={{display:'none'}}></div>
-                                    <div className='response' id='mce-success-response' style={{display:'none'}}></div>
+                                <div className='input-button-holder'>
+                                    <input type='email' name='EMAIL' className='email' id='mce-EMAIL' placeholder='email address' required></input>
+                                    <input className='button btn-secondary' value='Subscribe' type='submit'/>
+                                    <div id='mce-responses' className='clear'>
+                                        <div className='response' id='mce-error-response' style={{display:'none'}}></div>
+                                        <div className='response' id='mce-success-response' style={{display:'none'}}></div>
+                                    </div>
                                 </div>
-                            </div>
-                        </form>
+                            </form>
+                        </div>
                     </div>
 
                     <hr className='green'/>
