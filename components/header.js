@@ -21,7 +21,7 @@ class Overflow extends React.Component {
                         </div>
 
                         <a onClick={this.props.closeClicked.bind(this.props)} href='#community'>Community</a>
-                        <a href='https://tf-encrypted.readthedocs.io/en/latest/'>Documentation</a>
+            { /* <a href='https://tf-encrypted.readthedocs.io/en/latest/'>Documentation</a> */ }
 
                         <div className='footer'>
                             <div className='github-wrapper'>
@@ -57,7 +57,7 @@ class Header extends React.Component {
 
                 <div className='links'>
                     <a className='community' href='#community'>Community</a>
-                    <a href='https://tf-encrypted.readthedocs.io/en/latest/'>Documentation</a>
+            { /* <a href='https://tf-encrypted.readthedocs.io/en/latest/'>Documentation</a> */ }
                     <a className='cta-link' href='https://github.com/tf-encrypted/tf-encrypted'>
                         <img src={github}/>
                     </a>
