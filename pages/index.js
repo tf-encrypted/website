@@ -213,8 +213,7 @@ class Index extends React.Component {
                     <div className='small-block mailing-list'>
                         <h3>Subscribe to our mailing list</h3>
                 
-                        {/* TODO -- needs mailchimp url */}
-                        <form action='' method='post' id='mc-embedded-subscribe-form' name='mc-embedded-subscribe-form' className='validate' target='_blank' novalidate>
+                        <form action='https://tf-encrypted.us3.list-manage.com/subscribe/post?u=9d309aaebe20f1ee0e4019019&amp;id=d411344ca8' method='post' id='mc-embedded-subscribe-form' name='mc-embedded-subscribe-form' className='validate' target='_blank' novalidate>
                             <div className='input-button-holder'>
                                 <input type='email' name='EMAIL' className='email' id='mce-EMAIL' placeholder='email address' required></input>
                                 <input className='button btn-secondary' value='Subscribe' type='submit'/>
