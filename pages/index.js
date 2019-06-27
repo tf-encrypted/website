@@ -105,16 +105,14 @@ class Index extends React.Component {
 
                     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125728747-3"></script>
                     <script dangerouslySetInnerHTML={{ __html: `
-                      if (window.location.origin !== 'https://tf-encrypted.io') {
+                      if (window.location.origin === 'https://tf-encrypted.io') {
                           // only track prod
-                          return
+                          window.dataLayer = window.dataLayer || [];
+                          function gtag(){ dataLayer.push(arguments); }
+                          gtag('js', new Date());
+
+                          gtag('config', 'UA-125728747-3');
                       }
-
-                      window.dataLayer = window.dataLayer || [];
-                      function gtag(){ dataLayer.push(arguments); }
-                      gtag('js', new Date());
-
-                      gtag('config', 'UA-125728747-3');
                     `}} />
                 </Head>
 
