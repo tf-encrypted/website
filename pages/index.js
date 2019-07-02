@@ -22,26 +22,30 @@ import * as tfeShare from '../img/tfe-share.png'
 
 const CODE_BLOCK =
 `import tensorflow as tf 
-import tf_encrypted as tfe 
+import tf_encrypted as tfe
+
+input_shape = (5, 10)
 
 def provide_input(): 
     # normal TensorFlow operations can be run locally 
     # as part of defining a private input, in this 
     # case on the machine of the input provider 
-    return tf.ones(shape=(5, 10)) 
+    return tf.ones(shape=input_shape) 
 
-# define inputs 
-w = tfe.define_private_variable(tf.ones(shape=(10,10))) 
-x = tfe.define_private_input(‘input-provider’, provide_input) 
+with tfe.protocol.SecureNN():
+    model = tfe.keras.Sequential()
+    model.add(tfe.keras.layers.Dense(
+        512, batch_input_shape=input_shape)
+    )
+    model.add(tfe.keras.layers.Activation('relu'))
+    model.add(tfe.keras.layers.Dense(10))
 
-# define computation 
-y = tfe.matmul(x, w) 
+    # get prediction input from client
+    x = tfe.define_private_input("prediction-client", provide_input)
+    logits = model(x)
 
-with tfe.Session() as sess: 
-    # initialize variables 
-    sess.run(tfe.global_variables_initializer()) 
-    # reveal result 
-    result = sess.run(y.reveal())
+with tfe.Session() as sess:
+    result = sess.run(logits.reveal())
 `
 
 class Index extends React.Component {
@@ -176,7 +180,7 @@ class Index extends React.Component {
 
                     <div className='usage'>
                         <h2> Usage </h2>
-                        <p>The following is an example of a matrix multiplication on encrypted data using TF Encrypted</p>
+                        <p>TF Encrypted looks just like the tools you already know.  Here is a simple neural network:</p>
                         <div className='code-block'>
                         <Highlight className='code-block python'>
                             {CODE_BLOCK}
