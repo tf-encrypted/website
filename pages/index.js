@@ -180,7 +180,7 @@ class Index extends React.Component {
 
                     <div className='usage'>
                         <h2> Usage </h2>
-                        <p>TF Encrypted looks just like the tools you already know.  Here is a simple neural network:</p>
+                        <p>Enjoy the familiar Keras, but encrypted.</p>
                         <div className='code-block'>
                         <Highlight className='code-block python'>
                             {CODE_BLOCK}
