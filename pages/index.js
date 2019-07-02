@@ -22,24 +22,23 @@ import * as tutorialC from '../img/tutorial-c.png'
 import * as tfeShare from '../img/tfe-share.png'
 
 const CODE_BLOCK =
-`import tensorflow as tf 
+`import tensorflow as tf
 import tf_encrypted as tfe
 
 input_shape = (5, 10)
 
-def provide_input(): 
-    # normal TensorFlow operations can be run locally 
-    # as part of defining a private input, in this 
-    # case on the machine of the input provider 
-    return tf.ones(shape=input_shape) 
+def provide_input():
+    # normal TensorFlow operations can be run locally
+    # as part of defining a private input, in this
+    # case on the machine of the input provider
+    return tf.ones(shape=input_shape)
 
 with tfe.protocol.SecureNN():
-    model = tfe.keras.Sequential()
-    model.add(tfe.keras.layers.Dense(
-        512, batch_input_shape=input_shape)
-    )
-    model.add(tfe.keras.layers.Activation('relu'))
-    model.add(tfe.keras.layers.Dense(10))
+    model = tfe.keras.Sequential([
+        tfe.keras.layers.Dense(512, batch_input_shape=input_shape),
+        tfe.keras.layers.Activation('relu'),
+        tfe.keras.layers.Dense(10),
+    ])
 
     # get prediction input from client
     x = tfe.define_private_input("prediction-client", provide_input)
@@ -235,7 +234,7 @@ class Index extends React.Component {
                     <div className='small-block mailing-list'>
                         <div className='small-block-content max'>
                             <h3>Subscribe to our mailing list</h3>
-                    
+
                             <form action='https://tf-encrypted.us3.list-manage.com/subscribe/post?u=9d309aaebe20f1ee0e4019019&amp;id=d411344ca8' method='post' id='mc-embedded-subscribe-form' name='mc-embedded-subscribe-form' className='validate' target='_blank' novalidate>
                                 <div className='input-button-holder'>
                                     <input type='email' name='EMAIL' className='email' id='mce-EMAIL' placeholder='email address' required></input>
