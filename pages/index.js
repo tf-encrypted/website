@@ -32,16 +32,15 @@ def provide_input():
     # case on the machine of the input provider
     return tf.ones(shape=input_shape)
 
-with tfe.protocol.SecureNN():
-    model = tfe.keras.Sequential([
-        tfe.keras.layers.Dense(512, batch_input_shape=input_shape),
-        tfe.keras.layers.Activation('relu'),
-        tfe.keras.layers.Dense(10),
-    ])
+model = tfe.keras.Sequential([
+    tfe.keras.layers.Dense(512, batch_input_shape=input_shape),
+    tfe.keras.layers.Activation('relu'),
+    tfe.keras.layers.Dense(10),
+])
 
-    # get prediction input from client
-    x = tfe.define_private_input("prediction-client", provide_input)
-    logits = model(x)
+# get prediction input from client
+x = tfe.define_private_input("prediction-client", provide_input)
+logits = model(x)
 
 with tfe.Session() as sess:
     result = sess.run(logits.reveal())
