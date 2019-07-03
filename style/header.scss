@@ -191,6 +191,7 @@ $header-height: 92px;
             a {
                 margin-top: 3rem;
                 color: #70808D;
+                flex-grow: 1;
             }
 
             // img {
@@ -201,10 +202,9 @@ $header-height: 92px;
             .footer {
                 display: flex;
                 background-color: white;
-                flex-flow: row-reverse nowrap;
+                flex-flow: row nowrap;
                 padding: 0rem;
-                flex-grow: 1;
-                align-items: flex-end;
+                justify-content: flex-start;
 
                 * {
                     margin: 0px !important;
