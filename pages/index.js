@@ -15,6 +15,7 @@ import * as tfeEasyToUse from '../img/tfe-easy-to-use.png'
 
 import * as github from '../img/github.png'
 import * as slack from '../img/slack.png'
+import * as twitter from '../img/twitter.png'
 import * as tutorialA from '../img/tutorial-a.png'
 import * as tutorialB from '../img/tutorial-b.png'
 import * as tutorialC from '../img/tutorial-c.png'
@@ -224,6 +225,9 @@ class Index extends React.Component {
                             </a>
                             <a href='https://join.slack.com/t/tf-encrypted/shared_invite/enQtNjI5NjY5NTc0NjczLTFkYTRjYWQ0ZWVlZjVmZTVhODNiYTA2ZTdlNWRkMWE4MTI3ZGFjMWUwZDhhYTk1NjJkZTRiZjBhMzMyMjNlZmQ'>
                                 <img src={slack}/>
+                            </a>
+                            <a href='https://twitter.com/tf_encrypted'>
+                                <img src={twitter}/>
                             </a>
                         </div>
                     </div>
