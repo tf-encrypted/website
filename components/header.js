@@ -17,7 +17,9 @@ class Overflow extends React.Component {
                     </div>
                     <div className='links'>
                         <div className='logo'>
-                            <img src={logo}/>
+                            <a onClick={this.props.closeClicked.bind(this.props)} href='#'>
+                                <img src={logo}/>
+                            </a>
                         </div>
 
                         <a onClick={this.props.closeClicked.bind(this.props)} href='#community'>Community</a>
@@ -51,7 +53,9 @@ class Header extends React.Component {
                 </Head>
                 <div className='logo'>
                     <div className='logo-wrapper'>
-                        <img className='logo-icon' src={img}/>
+                        <a href='#'>
+                            <img className='logo-icon' src={img}/>
+                        </a>
                     </div>
                 </div>
 
